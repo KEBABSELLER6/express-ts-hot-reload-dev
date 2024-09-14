@@ -1,0 +1,13 @@
+{
+    "extends": "@tsconfig/recommended",
+    "compilerOptions": {
+        "outDir": "/dist",
+        "target": "ES2022",
+        "module": "ES2022",
+        "noEmitOnError": true,
+        "strict": true,
+        "rootDir": ".",
+        "noImplicitAny": true
+    },
+    "include": ["./src/**/*.ts"]
+}

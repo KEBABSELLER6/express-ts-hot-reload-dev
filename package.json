@@ -1,0 +1,27 @@
+{
+  "name": "express-ts-hot-reload-dev",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "build:prod": "rollup --config ./config/rollup.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "rollup": "^4.21.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2"
+  }
+}
