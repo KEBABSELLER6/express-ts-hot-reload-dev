@@ -1,9 +1,10 @@
 import express, { Request, Response } from "express"
+import { greet } from "./greeter"
 
 const app = express()
 
 app.get("/", (req: Request, res: Response) => {
-    res.status(200).json({message: "Hello World!"})
+    res.status(200).json({message: greet()})
 })
 
 const PORT = process.env.PORT || 9000 
