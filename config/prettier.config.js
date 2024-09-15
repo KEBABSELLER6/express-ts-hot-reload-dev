@@ -6,7 +6,7 @@ export default {
     bracketSpacing: true,
     overrides: [
         {
-            files: '*json',
+            files: ['*.json', '*.yml'],
             options: {
                 tabWidth: 2,
             },
