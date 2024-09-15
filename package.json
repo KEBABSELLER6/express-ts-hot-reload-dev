@@ -7,7 +7,8 @@
     "build:bundle": "rollup --config ./config/rollup.config.js",
     "dev": "nodemon --config ./config/nodemon.json",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "pre-commit": "lint-staged"
   },
   "keywords": [],
   "author": "Szajkovics Sándor",
