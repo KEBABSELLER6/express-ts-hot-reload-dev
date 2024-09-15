@@ -1,7 +1,7 @@
 {
   "name": "express-ts-hot-reload-dev",
   "version": "1.0.0",
-  "main": "dist/app.js",
+  "main": "dist/bundle.js",
   "type": "module",
   "scripts": {
     "build:bundle": "rollup --config ./config/rollup.config.js",
@@ -9,9 +9,19 @@
     "prepare": "husky",
     "format": "prettier --write .",
     "pre-commit": "lint-staged",
-    "lint": "eslint --config ./config/eslint.config.js"
+    "lint": "eslint --config ./config/eslint.config.js --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "hot-reload",
+    "example",
+    "typescript",
+    "express",
+    "node",
+    "husky",
+    "lint-staged",
+    "prettier",
+    "eslint"
+  ],
   "author": "Szajkovics Sándor",
   "license": "ISC",
   "description": "",
@@ -46,6 +56,6 @@
   "prettier": "./config/prettier.config.js",
   "lint-staged": {
     "**.{ts,js}": "eslint --quiet --fix --config ./config/eslint.config.js",
-    "**.{ts,json,js}": "prettier --write"
+    "**.{ts,json,js}": "prettier --write ."
   }
 }
