@@ -8,7 +8,8 @@
     "dev": "nodemon --config ./config/nodemon.json",
     "prepare": "husky",
     "format": "prettier --write .",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "lint": "eslint --config ./config/eslint.config.js"
   },
   "keywords": [],
   "author": "Szajkovics Sándor",
@@ -18,24 +19,33 @@
     "express": "^4.21.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/recommended": "^1.0.7",
+    "@types/eslint__js": "^8.42.3",
     "@types/express": "^4.17.21",
     "@types/node": "^22.5.5",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
     "rollup": "^4.21.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
     "tslib": "^2.7.0",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.5.0"
   },
-  "prettier": "./config/prettier.config.cjs",
+  "prettier": "./config/prettier.config.js",
   "lint-staged": {
-    "**.{ts,json}": "prettier --write "
+    "**.{ts,js}": "eslint --quiet --fix --config ./config/eslint.config.js",
+    "**.{ts,json,js}": "prettier --write"
   }
 }
